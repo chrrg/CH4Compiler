@@ -22,7 +22,7 @@ $c->performance(function($c){//性能监测
 ///字符串赋值开始sOut="hahahahahahaa"
 		$s=$c->unique("string");//获取唯一字符串名
 		$c->addSymbol($s,0,1);//type=0 id=data
-		$str=iconv("UTF-8", "gb2312" , "哈哈哈输出成功！\n换行成功\n缩进\t成功");//设置内容
+		$str=iconv("UTF-8", "gb2312" , "哈哈哈输出成功！\n换行成功\n缩进\t成功\n这里是CH4Compiler PHP写的Win32编译器\n成功");//设置内容
 		$l=strlen($str);
 		for($i=0;$i<$l;$i++)$c->byte(ord($str[$i]),1);//将字符串存入data
 		$c->byte(0,1);//data写入0
@@ -77,7 +77,7 @@ $c->performance(function($c){//性能监测
 //对话框结束
 		
 	});//源码
-	$c->outputFile();
+	$c->outputFile("new.exe");//将编译好的字节数组转成文件
 });
 //echo '<pre>';$c->output(0);echo '</pre>';//输出0区块代码
 ?>

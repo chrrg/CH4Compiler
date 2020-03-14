@@ -268,9 +268,7 @@ class compiler{
 			print(chr($ch));
 		//var_dump($this->code);
 	}
-	public function outputFile(){
-		$file="new.exe";
-		//var_dump(is_writable($file));die;
+	public function outputFile($file){
 		if(is_file($file)&&!is_writable($file)){
 			print("文件写入被拒绝！");
 			return false;
