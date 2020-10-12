@@ -19,7 +19,7 @@ PHP写的 Win32 exe文件 编译器 Compiler
 代码加了很多注释，有命令行的输出字符的方法，Win API调用的方法等，理论可以编译生成win下所有类型的可执行文件
 
 # 输出一个Hello World的例子：
-'''PHP
+```PHP
 <?php
 include "compiler.class.php";
 
@@ -60,9 +60,7 @@ $c->performance(function(&$c){//性能监测
 	});
 	$c->outputFile("new.exe");//将编译好的字节数组转成文件
 });
-
-
-'''
+```
 
 # 关于项目
 本项目借鉴了VB制作的Visia编译器  
